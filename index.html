@@ -1,0 +1,1699 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="S&K Digital Galaxy provides business consulting, finance, software, design, marketing, media, and managed IT services worldwide."
+    />
+    <meta name="theme-color" content="#0a1214" />
+    <title>S&amp;K Digital Galaxy | Business &amp; Digital Services</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --paper: #0a1214;
+        --ink: #edf5f0;
+        --muted: #a4b5ae;
+        --green: #43d6a0;
+        --lime: #c8f36a;
+        --coral: #ff8068;
+        --line: rgba(149, 192, 174, 0.23);
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: "Aptos", "Segoe UI Variable", "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 24px;
+      }
+
+      ::selection {
+        background: var(--lime);
+        color: var(--paper);
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        background-image: linear-gradient(rgba(105, 180, 151, 0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(105, 180, 151, 0.055) 1px, transparent 1px);
+        background-size: 48px 48px;
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 17px;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid var(--coral);
+        outline-offset: 4px;
+      }
+
+      .wrap {
+        width: min(1160px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: relative;
+        z-index: 2;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        min-height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .brand-logo {
+        width: 72px;
+        height: 72px;
+        display: block;
+        object-fit: contain;
+      }
+
+      .brand-name {
+        display: block;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 1.2;
+      }
+
+      .brand-type {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 11px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .nav-links a {
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .nav-links a:hover {
+        color: var(--green);
+      }
+
+      .nav-links a:focus-visible,
+      .client-filter:focus-visible {
+        outline-offset: 3px;
+      }
+
+      .nav-cta,
+      .button {
+        min-height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 19px;
+        border: 1px solid var(--ink);
+        background: var(--ink);
+        color: var(--paper);
+        font: 700 14px var(--sans);
+        text-decoration: none;
+        transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+      }
+
+      .nav-cta:hover,
+      .button:hover {
+        transform: translateY(-2px);
+        background: var(--green);
+        color: var(--paper);
+      }
+
+      .nav-cta:active,
+      .button:active {
+        transform: translateY(0);
+      }
+
+      .button:disabled {
+        cursor: wait;
+        opacity: 0.7;
+        transform: none;
+      }
+
+      .menu-toggle {
+        display: none;
+        min-width: 44px;
+        min-height: 44px;
+        border: 1px solid var(--line);
+        background: transparent;
+        color: var(--ink);
+        font: 700 13px var(--sans);
+        cursor: pointer;
+      }
+
+      .hero {
+        padding: 88px 0 96px;
+        overflow: hidden;
+      }
+
+      .hero-grid {
+        max-width: 800px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 21px;
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 25px;
+        height: 2px;
+        background: var(--coral);
+        content: "";
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 650px;
+        margin-bottom: 24px;
+        font: 400 76px/0.98 var(--serif);
+        letter-spacing: 0;
+      }
+
+      h1 em {
+        color: var(--green);
+        font-weight: 400;
+      }
+
+      .hero-copy {
+        max-width: 540px;
+        margin-bottom: 29px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 13px;
+      }
+
+      .button-light {
+        border-color: var(--line);
+        background: transparent;
+        color: var(--ink);
+      }
+
+      .button-light:hover {
+        background: var(--lime);
+        color: var(--ink);
+      }
+
+      .hero-note {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-top: 33px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--coral);
+      }
+
+      .section {
+        padding: 86px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .section-heading {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        align-items: end;
+        gap: 54px;
+        margin-bottom: 48px;
+      }
+
+      .section-heading h2,
+      .about h2,
+      .contact h2 {
+        margin-bottom: 0;
+        font: 400 56px/1.02 var(--serif);
+        letter-spacing: 0;
+      }
+
+      .section-intro {
+        max-width: 490px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .service-tools {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1.45fr);
+        align-items: end;
+        gap: 18px 24px;
+        margin-bottom: 22px;
+      }
+
+      .service-search-field {
+        max-width: 420px;
+      }
+
+      .service-search-field label {
+        color: var(--ink);
+      }
+
+      .service-count {
+        margin: 0 0 12px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .service-directory {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .service-department {
+        min-width: 0;
+        align-self: start;
+        border: 1px solid var(--line);
+        background: rgba(12, 26, 28, 0.92);
+      }
+
+      .service-department[hidden],
+      .service-subgroup[hidden],
+      .service-list li[hidden] {
+        display: none;
+      }
+
+      .service-department > summary {
+        min-height: 76px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 34px;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .service-department > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .service-department[open] > summary {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .service-department > summary:hover .service-department-title {
+        color: var(--lime);
+      }
+
+      .service-department > summary:focus-visible {
+        outline: 2px solid var(--coral);
+        outline-offset: -2px;
+      }
+
+      .service-summary-copy {
+        display: grid;
+        gap: 4px;
+      }
+
+      .service-department-title {
+        font: 400 19px/1.2 var(--serif);
+      }
+
+      .service-department-count {
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .service-toggle {
+        width: 32px;
+        height: 32px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        color: var(--lime);
+        font-size: 20px;
+        line-height: 1;
+      }
+
+      .service-toggle::before {
+        content: "+";
+      }
+
+      .service-department[open] .service-toggle::before {
+        content: "−";
+      }
+
+      .service-department-content {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0 22px;
+        padding: 2px 16px 16px;
+      }
+
+      .service-subgroup {
+        min-width: 0;
+        padding-top: 14px;
+        border-bottom: 1px solid rgba(149, 192, 174, 0.15);
+      }
+
+      .service-subgroup h3 {
+        margin-bottom: 9px;
+        color: var(--lime);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .service-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6px;
+        margin: 0;
+        padding: 0 0 13px;
+        list-style: none;
+      }
+
+      .service-list li {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+      }
+
+      .service-list li::before {
+        width: 5px;
+        height: 5px;
+        flex: 0 0 5px;
+        background: var(--coral);
+        content: "";
+      }
+
+      .service-search-empty[hidden] {
+        display: none;
+      }
+
+      .service-search-empty {
+        padding: 22px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .technology-section {
+        background: rgba(14, 35, 35, 0.86);
+      }
+
+      .feedback-section {
+        background: rgba(6, 14, 17, 0.72);
+      }
+
+      .feedback-state {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding: 20px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .feedback-state strong {
+        color: var(--lime);
+        font: 400 22px/1.2 var(--serif);
+      }
+
+      .feedback-state p {
+        max-width: 620px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .review-disclaimer {
+        margin-bottom: 20px;
+        padding: 14px 16px;
+        border-left: 3px solid var(--coral);
+        background: rgba(255, 128, 104, 0.08);
+        color: var(--ink);
+        font-size: 14px;
+      }
+
+      .client-entry[hidden] {
+        display: none;
+      }
+
+      .review-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #0c191b;
+      }
+
+      .review-table col:nth-child(1) {
+        width: 20%;
+      }
+
+      .review-table col:nth-child(2) {
+        width: 11%;
+      }
+
+      .review-table col:nth-child(3) {
+        width: 34%;
+      }
+
+      .review-table col:nth-child(4) {
+        width: 35%;
+      }
+
+      .review-table th,
+      .review-table td {
+        padding: 14px 15px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+        overflow-wrap: anywhere;
+      }
+
+      .review-table thead th {
+        color: var(--green);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+      }
+
+      .review-table tbody th[scope="row"] {
+        color: var(--ink);
+        font: 400 18px/1.25 var(--serif);
+      }
+
+      .review-table tbody tr:nth-child(even) {
+        background: rgba(67, 214, 160, 0.035);
+      }
+
+      .review-table tbody tr:hover {
+        background: rgba(67, 214, 160, 0.08);
+      }
+
+      .review-table tbody td {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .review-table .review-score {
+        color: var(--lime);
+        font-size: 15px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .review-table blockquote {
+        margin: 0;
+      }
+
+      .review-table td[data-label="Services"] {
+        font-size: 13px;
+      }
+
+      .review-table tr[hidden] {
+        display: none;
+      }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .technology-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 26px;
+      }
+
+      .technology-point {
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+      }
+
+      .technology-point h3 {
+        margin-bottom: 10px;
+        color: var(--lime);
+        font: 400 23px/1.2 var(--serif);
+      }
+
+      .technology-point p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .about-band {
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: rgba(17, 42, 38, 0.96);
+      }
+
+      .clients-section {
+        background: rgba(6, 14, 17, 0.72);
+      }
+
+      .client-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+
+      .client-filter {
+        min-height: 42px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        background: transparent;
+        color: var(--ink);
+        font: 700 14px var(--sans);
+        cursor: pointer;
+      }
+
+      .client-filter[aria-selected="true"] {
+        border-color: var(--green);
+        background: var(--green);
+        color: var(--paper);
+      }
+
+      .client-filter span {
+        font-size: 11px;
+        opacity: 0.75;
+      }
+
+      .client-panel[hidden] {
+        display: none;
+      }
+
+      .client-list {
+        border-top: 1px solid var(--line);
+      }
+
+      .client-entry {
+        display: grid;
+        grid-template-columns: minmax(190px, 0.72fr) minmax(0, 1.28fr);
+        align-items: center;
+        gap: 24px;
+        padding: 13px 10px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .client-index {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--green);
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+
+      .client-entry h3 {
+        margin: 0;
+        font: 400 20px/1.2 var(--serif);
+        overflow-wrap: anywhere;
+      }
+
+      .client-services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .client-services li {
+        display: flex;
+        align-items: baseline;
+        gap: 7px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .client-services li::before {
+        width: 4px;
+        height: 4px;
+        flex: 0 0 4px;
+        background: var(--coral);
+        content: "";
+      }
+
+      .about {
+        display: grid;
+        grid-template-columns: 0.82fr 1.18fr;
+        gap: 90px;
+        align-items: start;
+        padding: 81px 0;
+      }
+
+      .about .eyebrow {
+        color: var(--lime);
+      }
+
+      .about-copy {
+        max-width: 600px;
+      }
+
+      .about-copy p {
+        margin-bottom: 18px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .about-copy p:last-child {
+        margin-bottom: 0;
+      }
+
+      .reach {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 28px;
+        padding-top: 19px;
+        border-top: 1px solid var(--line);
+      }
+
+      .reach-mark {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        background: var(--green);
+        color: var(--paper);
+        font-size: 17px;
+        font-weight: 800;
+      }
+
+      .reach strong,
+      .reach span {
+        display: block;
+      }
+
+      .reach strong {
+        font-size: 13px;
+      }
+
+      .reach span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .contact {
+        padding: 86px 0 72px;
+      }
+
+      .contact-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 34px;
+        margin-bottom: 43px;
+      }
+
+      .contact-top .eyebrow {
+        margin-bottom: 17px;
+      }
+
+      .contact-top p {
+        max-width: 350px;
+        margin: 0 0 4px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr 1fr;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contact-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+        gap: 42px;
+        align-items: start;
+      }
+
+      .inquiry-form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .form-field {
+        display: grid;
+        gap: 7px;
+      }
+
+      .form-field-wide {
+        grid-column: 1 / -1;
+      }
+
+      .form-field label {
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+      }
+
+      .form-field input,
+      .form-field select,
+      .form-field textarea {
+        width: 100%;
+        min-height: 46px;
+        padding: 11px 12px;
+        border: 1px solid var(--line);
+        border-radius: 0;
+        background: #0c191b;
+        color: var(--ink);
+        font: 14px var(--sans);
+      }
+
+      .form-field textarea {
+        min-height: 125px;
+        resize: vertical;
+      }
+
+      .form-field input::placeholder,
+      .form-field textarea::placeholder {
+        color: #80938b;
+      }
+
+      .form-submit {
+        justify-self: start;
+        cursor: pointer;
+      }
+
+      .form-note {
+        margin: 0;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.55;
+      }
+
+      .form-note[data-state="error"] {
+        color: var(--coral);
+      }
+
+      .form-privacy-note {
+        padding-top: 4px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .form-trap {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+
+      .contact-details {
+        display: grid;
+        align-content: start;
+        padding-top: 4px;
+      }
+
+      .contact-details .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-details .contact-item {
+        min-height: 0;
+        padding: 16px 0;
+      }
+
+      .contact-details .contact-item + .contact-item {
+        padding-left: 0;
+        border-left: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contact-details .contact-item:last-child {
+        border-bottom: 0;
+      }
+
+      .contact-item {
+        min-height: 157px;
+        padding: 24px 20px 24px 0;
+      }
+
+      .contact-item + .contact-item {
+        padding-left: 24px;
+        border-left: 1px solid var(--line);
+      }
+
+      .contact-label {
+        display: block;
+        margin-bottom: 11px;
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+
+      .contact-item a {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+        overflow-wrap: anywhere;
+      }
+
+      .contact-item p {
+        margin: 0 0 7px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 8px 16px;
+      }
+
+      .contact-actions a:last-child {
+        color: var(--green);
+        font-size: 12px;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 21px 0 28px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .footer p {
+        margin: 0;
+      }
+
+      @media (max-width: 900px) {
+        .menu-toggle {
+          display: inline-grid;
+          place-items: center;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 91px;
+          right: 24px;
+          display: none;
+          width: min(340px, calc(100vw - 48px));
+          align-items: stretch;
+          gap: 0;
+          padding: 10px 18px 18px;
+          border: 1px solid var(--line);
+          background: #0c191b;
+        }
+
+        .nav-links.is-open {
+          display: grid;
+        }
+
+        .nav-links a {
+          padding: 13px 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .nav-links .nav-cta {
+          margin-top: 12px;
+          padding: 0 16px;
+          border: 1px solid var(--ink);
+        }
+      }
+
+      @media (max-width: 800px) {
+        h1 {
+          font-size: 62px;
+        }
+
+        .section-heading h2,
+        .about h2,
+        .contact h2 {
+          font-size: 46px;
+        }
+
+        .section-heading,
+        .about {
+          gap: 34px;
+        }
+
+        .about {
+          grid-template-columns: 0.9fr 1.1fr;
+        }
+
+        .service-directory {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .service-department-content {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .technology-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .client-entry {
+          grid-template-columns: minmax(160px, 0.8fr) minmax(0, 1.2fr);
+          gap: 16px;
+        }
+
+        .review-table,
+        .review-table tbody,
+        .review-table tr,
+        .review-table th,
+        .review-table td {
+          display: block;
+          width: 100%;
+        }
+
+        .review-table thead {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+
+        .review-table tbody tr {
+          padding: 12px 14px;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .review-table th,
+        .review-table td {
+          padding: 5px 0;
+          border: 0;
+        }
+
+        .review-table td[data-label]::before {
+          display: block;
+          margin-bottom: 3px;
+          color: var(--green);
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 0.6px;
+          text-transform: uppercase;
+          content: attr(data-label);
+        }
+
+        .contact-layout {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .wrap {
+          width: min(100% - 36px, 500px);
+        }
+
+        .nav {
+          min-height: 84px;
+        }
+
+        .brand-logo {
+          width: 56px;
+          height: 56px;
+        }
+
+        .nav-links {
+          top: 83px;
+          right: 0;
+          left: 0;
+          width: auto;
+          border-right: 0;
+          border-left: 0;
+        }
+
+        .brand-name {
+          font-size: 12px;
+        }
+
+        .hero {
+          padding: 58px 0 61px;
+        }
+
+        h1 {
+          font-size: 48px;
+        }
+
+        .hero-copy {
+          font-size: 17px;
+        }
+
+        .section {
+          padding: 62px 0;
+        }
+
+        .section-heading,
+        .about {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          margin-bottom: 35px;
+        }
+
+        .section-heading h2,
+        .about h2,
+        .contact h2 {
+          font-size: 38px;
+        }
+
+        .service-directory,
+        .service-department-content,
+        .technology-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .client-entry {
+          grid-template-columns: 1fr;
+          gap: 9px;
+          padding: 13px 4px;
+        }
+
+        .inquiry-form {
+          grid-template-columns: 1fr;
+        }
+
+        .form-field-wide {
+          grid-column: auto;
+        }
+
+        .about-band .about {
+          margin-bottom: 0;
+          padding: 59px 0;
+        }
+
+        .contact {
+          padding: 62px 0 48px;
+        }
+
+        .contact-top {
+          display: block;
+          margin-bottom: 32px;
+        }
+
+        .contact-top p {
+          margin-top: 18px;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .feedback-state {
+          display: grid;
+          gap: 8px;
+        }
+
+        .contact-item,
+        .contact-item + .contact-item {
+          min-height: 0;
+          padding: 19px 0;
+          border-left: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .contact-item:last-child {
+          border-bottom: 0;
+        }
+
+        .footer {
+          display: grid;
+          gap: 5px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="S&K Digital Galaxy home">
+          <img class="brand-logo" src="assets/sk-digital-galaxy-logo.svg" alt="" />
+          <span>
+            <span class="brand-name">S&amp;K DIGITAL GALAXY</span>
+            <span class="brand-type">Business + digital services</span>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-links">
+          Menu
+        </button>
+        <div class="nav-links" id="site-links">
+          <a href="#company">Company</a>
+          <a href="#services">Services</a>
+          <a href="#technology">Technology</a>
+          <a href="#feedback">Feedback</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-cta" href="mailto:sandkdigitalgalaxy@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-grid wrap">
+          <div>
+            <p class="eyebrow">Worldwide business support</p>
+            <h1>Your next stage, <em>better built.</em></h1>
+            <p class="hero-copy">
+              Practical business guidance and digital expertise, brought together to help turn your next idea into meaningful progress.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#contact">Talk about your project <span aria-hidden="true">↗</span></a>
+              <a class="button button-light" href="#services">Explore services <span aria-hidden="true">↓</span></a>
+            </div>
+            <p class="hero-note"><span class="status-dot" aria-hidden="true"></span>Serving clients and businesses worldwide</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section technology-section" id="company">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">S&amp;K Digital Galaxy</p>
+              <h2>Business services.<br />Technology with purpose.</h2>
+            </div>
+            <p class="section-intro">
+              S&amp;K Digital Galaxy brings 12 service departments together, spanning business consulting, finance, web and software, AI and automation, design, media, security, data, and managed IT. The selected client work on this site represents India, Canada, the United Kingdom, and Australia; services are available worldwide.
+            </p>
+          </div>
+          <div class="technology-grid" id="technology">
+            <article class="technology-point">
+              <h3>Connect the work</h3>
+              <p>Websites, CRM tools, databases, and cloud systems can bring customer and team workflows into clearer view.</p>
+            </article>
+            <article class="technology-point">
+              <h3>Make work repeatable</h3>
+              <p>Automation can reduce repetitive tasks and handoffs, while people stay involved where judgment matters.</p>
+            </article>
+            <article class="technology-point">
+              <h3>Understand the signals</h3>
+              <p>Clean data, reports, and dashboards can help teams spot patterns and make decisions with better context.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section feedback-section" id="feedback">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Sample client feedback</p>
+              <h2>Ratings by country.</h2>
+            </div>
+            <p class="section-intro">Country-by-country examples supplied for this website mockup.</p>
+          </div>
+          <p class="review-disclaimer"><strong>Sample content only:</strong> these ratings and comments are illustrative, unverified, and must not be presented as genuine client testimonials until each client confirms and approves them.</p>
+          <div class="client-filters" role="tablist" aria-label="Sample feedback by country">
+            <button class="client-filter" id="review-tab-india" type="button" role="tab" aria-selected="true" aria-controls="review-panel-india" tabindex="0">India <span>13</span></button>
+            <button class="client-filter" id="review-tab-usa" type="button" role="tab" aria-selected="false" aria-controls="review-panel-usa" tabindex="-1">USA <span>09</span></button>
+            <button class="client-filter" id="review-tab-canada" type="button" role="tab" aria-selected="false" aria-controls="review-panel-canada" tabindex="-1">Canada <span>07</span></button>
+            <button class="client-filter" id="review-tab-uk" type="button" role="tab" aria-selected="false" aria-controls="review-panel-uk" tabindex="-1">United Kingdom <span>04</span></button>
+            <button class="client-filter" id="review-tab-australia" type="button" role="tab" aria-selected="false" aria-controls="review-panel-australia" tabindex="-1">Australia <span>05</span></button>
+          </div>
+          <section class="client-panel" id="review-panel-india" role="tabpanel" aria-labelledby="review-tab-india" tabindex="0" data-visible-count="13">
+            <div class="review-grid">
+              <article class="review-entry"><h3>Cheezy Blast Pizza</h3><span class="review-score">4.8 / 5</span><blockquote>“Social media content and reels were delivered professionally and consistently.”</blockquote></article>
+              <article class="review-entry"><h3>GlowNest Beauty Studio</h3><span class="review-score">4.7 / 5</span><blockquote>“The branding and creative designs gave our studio a more professional look.”</blockquote></article>
+              <article class="review-entry"><h3>Shree Krishna Saree House</h3><span class="review-score">4.9 / 5</span><blockquote>“The e-commerce and marketing support made our online operations much easier.”</blockquote></article>
+              <article class="review-entry"><h3>Urban Chai Café</h3><span class="review-score">4.8 / 5</span><blockquote>“Good website and social media support with attractive food content.”</blockquote></article>
+              <article class="review-entry"><h3>PixelCraft Studio</h3><span class="review-score">4.9 / 5</span><blockquote>“Excellent creative editing, graphics and motion-design support.”</blockquote></article>
+              <article class="review-entry"><h3>RoyalRide Travels</h3><span class="review-score">4.7 / 5</span><blockquote>“CRM and WhatsApp automation helped us organize customer follow-ups.”</blockquote></article>
+              <article class="review-entry"><h3>Aarohi Education Hub</h3><span class="review-score">4.8 / 5</span><blockquote>“Data and back-office work was handled systematically.”</blockquote></article>
+              <article class="review-entry"><h3>FinEdge Advisors</h3><span class="review-score">4.9 / 5</span><blockquote>“Reports and bookkeeping support were accurate and well organized.”</blockquote></article>
+              <article class="review-entry"><h3>QuickKart Online</h3><span class="review-score">4.8 / 5</span><blockquote>“Good combination of website, SEO and digital marketing support.”</blockquote></article>
+              <article class="review-entry"><h3>SafeWatch 360</h3><span class="review-score">4.7 / 5</span><blockquote>“Remote monitoring and security reporting were convenient for our team.”</blockquote></article>
+              <article class="review-entry"><h3>BuildMint Consultants</h3><span class="review-score">4.9 / 5</span><blockquote>“Business planning and market-analysis support was very useful.”</blockquote></article>
+              <article class="review-entry"><h3>StyleAura Boutique</h3><span class="review-score">4.8 / 5</span><blockquote>“Catalogue and online-store support improved our digital presentation.”</blockquote></article>
+              <article class="review-entry"><h3>DataNest Solutions</h3><span class="review-score">4.9 / 5</span><blockquote>“Data cleaning and dashboards saved our team considerable reporting time.”</blockquote></article>
+            </div>
+          </section>
+          <section class="client-panel" id="review-panel-usa" role="tabpanel" aria-labelledby="review-tab-usa" tabindex="0" data-visible-count="9" hidden>
+            <div class="review-grid">
+              <article class="review-entry"><h3>Little Caesars</h3><span class="review-score">Rating pending</span><blockquote>Client feedback not provided yet.</blockquote></article>
+              <article class="review-entry"><h3>BluePeak Realty</h3><span class="review-score">4.8 / 5</span><blockquote>“The website, SEO and lead-generation support worked well together.”</blockquote></article>
+              <article class="review-entry"><h3>BurgerBolt Kitchen</h3><span class="review-score">4.7 / 5</span><blockquote>“Creative marketing material and social media support were delivered well.”</blockquote></article>
+              <article class="review-entry"><h3>CloudBridge Consulting</h3><span class="review-score">4.9 / 5</span><blockquote>“Remote IT and cloud support made our workflow easier to manage.”</blockquote></article>
+              <article class="review-entry"><h3>LedgerLoop</h3><span class="review-score">4.9 / 5</span><blockquote>“Bookkeeping and financial reporting were organized and easy to review.”</blockquote></article>
+              <article class="review-entry"><h3>BrightFrame Media</h3><span class="review-score">4.8 / 5</span><blockquote>“The editing and motion-graphics work matched our content requirements.”</blockquote></article>
+              <article class="review-entry"><h3>NovaNest E-Commerce</h3><span class="review-score">4.8 / 5</span><blockquote>“Good support across e-commerce, customer management and automation.”</blockquote></article>
+              <article class="review-entry"><h3>WatchGrid Security</h3><span class="review-score">4.7 / 5</span><blockquote>“Remote CCTV observation and incident monitoring were convenient.”</blockquote></article>
+              <article class="review-entry"><h3>TaskPilot AI</h3><span class="review-score">4.9 / 5</span><blockquote>“AI automation reduced repetitive customer and reporting tasks.”</blockquote></article>
+            </div>
+          </section>
+          <section class="client-panel" id="review-panel-canada" role="tabpanel" aria-labelledby="review-tab-canada" tabindex="0" data-visible-count="7" hidden>
+            <div class="review-grid">
+              <article class="review-entry"><h3>MapleMunch Café</h3><span class="review-score">4.7 / 5</span><blockquote>“Website and digital content support were professional and responsive.”</blockquote></article>
+              <article class="review-entry"><h3>NorthStar Properties</h3><span class="review-score">4.8 / 5</span><blockquote>“SEO and lead-generation support helped organize our online presence.”</blockquote></article>
+              <article class="review-entry"><h3>TrueNorth Books</h3><span class="review-score">4.9 / 5</span><blockquote>“Accounting and payroll data were maintained in a structured way.”</blockquote></article>
+              <article class="review-entry"><h3>CodeHarbor Digital</h3><span class="review-score">4.8 / 5</span><blockquote>“Software and remote IT support were handled efficiently.”</blockquote></article>
+              <article class="review-entry"><h3>Velvet Maple Boutique</h3><span class="review-score">4.8 / 5</span><blockquote>“E-commerce and product-content support improved our online presentation.”</blockquote></article>
+              <article class="review-entry"><h3>DataPeak Analytics</h3><span class="review-score">4.9 / 5</span><blockquote>“Dashboards and analytics made our business data easier to understand.”</blockquote></article>
+              <article class="review-entry"><h3>SafeVision Canada</h3><span class="review-score">4.7 / 5</span><blockquote>“Remote monitoring provided convenient security observation.”</blockquote></article>
+              <article class="review-entry"><h3>WorkNest HR</h3><span class="review-score">4.9 / 5</span><blockquote>“HR records, payroll and employee data support were well organized.”</blockquote></article>
+            </div>
+          </section>
+          <section class="client-panel" id="review-panel-uk" role="tabpanel" aria-labelledby="review-tab-uk" tabindex="0" data-visible-count="4" hidden>
+            <div class="review-grid">
+              <article class="review-entry"><h3>Crust &amp; Ember</h3><span class="review-score">4.8 / 5</span><blockquote>“Website and social media creatives were delivered to a good standard.”</blockquote></article>
+              <article class="review-entry"><h3>PrimeNest Properties</h3><span class="review-score">4.9 / 5</span><blockquote>“Strong combination of website, SEO and lead-management support.”</blockquote></article>
+              <article class="review-entry"><h3>LedgerBee UK</h3><span class="review-score">4.8 / 5</span><blockquote>“Bookkeeping and reporting support made our records easier to manage.”</blockquote></article>
+              <article class="review-entry"><h3>PixelRush Studio</h3><span class="review-score">4.9 / 5</span><blockquote>“Very good creative editing and motion-graphics support.”</blockquote></article>
+              <article class="review-entry"><h3>TaskForge UK</h3><span class="review-score">4.9 / 5</span><blockquote>“Automation helped reduce repetitive administrative work.”</blockquote></article>
+              <article class="review-entry"><h3>BritStyle Collective</h3><span class="review-score">4.8 / 5</span><blockquote>“Online-store and catalogue support improved our brand presentation.”</blockquote></article>
+              <article class="review-entry"><h3>WatchTower 360</h3><span class="review-score">4.7 / 5</span><blockquote>“Remote CCTV observation and security alerts were useful for our operations.”</blockquote></article>
+              <article class="review-entry"><h3>GreenGrid Consulting</h3><span class="review-score">4.8 / 5</span><blockquote>“Business research and strategy support was structured and practical.”</blockquote></article>
+            </div>
+          </section>
+          <section class="client-panel" id="review-panel-australia" role="tabpanel" aria-labelledby="review-tab-australia" tabindex="0" data-visible-count="5" hidden>
+            <div class="review-grid">
+              <article class="review-entry"><h3>Coastal Crust Pizza</h3><span class="review-score">4.8 / 5</span><blockquote>“Website, advertising and social content were handled professionally.”</blockquote></article>
+              <article class="review-entry"><h3>AussieNest Realty</h3><span class="review-score">4.9 / 5</span><blockquote>“Good digital marketing and lead-generation support.”</blockquote></article>
+              <article class="review-entry"><h3>SwiftBooks AU</h3><span class="review-score">4.9 / 5</span><blockquote>“Accounting and financial-reporting support was organized and reliable.”</blockquote></article>
+              <article class="review-entry"><h3>SparkByte Digital</h3><span class="review-score">4.8 / 5</span><blockquote>“Remote IT, cloud and software support were convenient for our team.”</blockquote></article>
+              <article class="review-entry"><h3>Brew &amp; Bloom Café</h3><span class="review-score">4.7 / 5</span><blockquote>“The website and digital menu designs looked professional.”</blockquote></article>
+              <article class="review-entry"><h3>VisionShield AU</h3><span class="review-score">4.8 / 5</span><blockquote>“Remote monitoring and AI analytics provided useful security visibility.”</blockquote></article>
+              <article class="review-entry"><h3>AutoPilot Hub</h3><span class="review-score">4.9 / 5</span><blockquote>“AI and automation support helped streamline repetitive workflows.”</blockquote></article>
+              <article class="review-entry"><h3>DataWave Analytics</h3><span class="review-score">4.9 / 5</span><blockquote>“Dashboards and business analytics made reporting much easier.”</blockquote></article>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">What we do</p>
+              <h2>Capabilities<br />that connect.</h2>
+            </div>
+            <p class="section-intro">
+              From business strategy and finance to software, creative production, and managed technology.
+            </p>
+          </div>
+          <div class="service-tools">
+            <div class="form-field service-search-field">
+              <label for="service-search">Search the service catalog</label>
+              <input id="service-search" type="search" placeholder="Try “payroll”, “website”, or “CCTV”" autocomplete="off" />
+            </div>
+            <p class="service-count" id="service-count" aria-live="polite" role="status">12 departments</p>
+          </div>
+          <div class="service-directory" id="service-directory">
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">Business Consulting &amp; Growth</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>Business Consulting</h3><ul class="service-list"><li>Business Consultation</li><li>Business Setup Guidance</li><li>Business Planning</li><li>Business Model Development</li><li>Business Growth Planning</li><li>Business Expansion Planning</li><li>Business Development</li><li>Business Management Consulting</li><li>Business Operations Consulting</li><li>Business Process Improvement</li><li>Business Problem Solving</li><li>Business Strategy</li><li>Long-Term Business Planning</li><li>Business Performance Analysis</li><li>Business Risk Analysis</li><li>Market Research</li><li>Market Analysis</li><li>Competitor Analysis</li><li>New Business Ideas &amp; Planning</li><li>Startup Guidance</li><li>Franchise Business Guidance</li><li>Business Restructuring</li><li>Digital Transformation Consulting</li></ul></div>
+                <div class="service-subgroup"><h3>Management Services</h3><ul class="service-list"><li>Business Management</li><li>Operations Management</li><li>Project Management</li><li>Customer Management</li><li>Sales Management</li><li>Vendor Management</li><li>Inventory Management</li><li>Branch Management</li><li>Employee Management</li><li>Workflow Management</li><li>Performance Management</li><li>KPI Management</li><li>Management Reporting</li></ul></div>
+                <div class="service-subgroup"><h3>Business Growth</h3><ul class="service-list"><li>Business Growth</li><li>Revenue Growth Planning</li><li>Customer Acquisition Strategy</li><li>Sales Growth Strategy</li><li>Marketing Growth Strategy</li><li>Customer Retention Strategy</li><li>Business Expansion Strategy</li><li>Cost Reduction Planning</li><li>Productivity Improvement</li><li>Process Optimization</li><li>Automation Planning</li><li>Business Performance Improvement</li></ul></div>
+              </div>
+            </details>
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">Finance, Investment &amp; Wealth Solutions</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>Financial Planning</h3><ul class="service-list"><li>Financial Planning</li><li>Financial Goal Planning</li><li>Personal Financial Planning</li><li>Business Financial Planning</li><li>Wealth Planning</li><li>Financial Freedom Planning</li><li>Cash-Flow Planning</li><li>Budget Planning</li><li>Future Planning</li><li>Retirement Planning</li><li>Education Goal Planning</li><li>Family Financial Goal Planning</li><li>Risk Management Planning</li></ul></div>
+                <div class="service-subgroup"><h3>Investment Services</h3><ul class="service-list"><li>Investment Consultation</li><li>Investment Planning</li><li>Investment Portfolio Guidance</li><li>SIP Planning</li><li>Wealth Creation Planning</li><li>Long-Term Investment Planning</li><li>Goal-Based Investment Planning</li><li>Investment Review</li><li>Portfolio Review</li><li>Asset Allocation Guidance</li></ul></div>
+                <div class="service-subgroup"><h3>Insurance Solutions</h3><ul class="service-list"><li>Insurance Consultation</li><li>Life Insurance Planning</li><li>Term Insurance Guidance</li><li>Family Protection Planning</li><li>Child Protection Planning</li><li>Retirement &amp; Annuity Solutions</li><li>Insurance Needs Analysis</li><li>Insurance Portfolio Review</li><li>Insurance Policy Servicing Support</li><li>Insurance Claim Support Coordination</li></ul></div>
+              </div>
+            </details>
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">IT, Software &amp; Digital Solutions</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>Website Services</h3><ul class="service-list"><li>Business Website</li><li>Corporate Website</li><li>Portfolio Website</li><li>E-commerce Website</li><li>Online Store</li><li>Landing Page</li><li>Real Estate Website</li><li>Restaurant Website</li><li>School/College Website</li><li>Hospital Website</li><li>NGO Website</li><li>Booking Website</li><li>Membership Website</li><li>Custom Web Portal</li><li>Customer Portal</li><li>Admin Dashboard</li><li>Web Application</li><li>Website Redesign</li><li>Website Maintenance</li><li>Website Speed Optimization</li><li>Domain &amp; Hosting Management</li></ul></div>
+                <div class="service-subgroup"><h3>Software Development</h3><ul class="service-list"><li>Custom Software Development</li><li>Business Management Software</li><li>CRM Software</li><li>ERP Software</li><li>HR Management Software</li><li>Payroll Software</li><li>Accounting Software</li><li>Inventory Software</li><li>Billing Software</li><li>POS Software</li><li>School Management Software</li><li>Restaurant Management Software</li><li>Customer Management Software</li><li>Project Management Software</li><li>Attendance Management Software</li><li>Custom Enterprise Software</li></ul></div>
+                <div class="service-subgroup"><h3>Mobile Applications</h3><ul class="service-list"><li>Android App Development</li><li>iOS App Development</li><li>Cross-Platform App Development</li><li>Business Mobile Apps</li><li>Customer Apps</li><li>Employee Apps</li><li>Booking Apps</li><li>E-commerce Apps</li></ul></div>
+                <div class="service-subgroup"><h3>Cloud &amp; IT</h3><ul class="service-list"><li>Cloud Solutions</li><li>Cloud Setup</li><li>Cloud Migration</li><li>Cloud Storage</li><li>Data Backup</li><li>Server Management</li><li>Database Management</li><li>Email Setup</li><li>Business Email</li><li>Microsoft 365</li><li>Google Workspace</li><li>IT Infrastructure</li><li>Remote IT Support</li><li>IT Maintenance</li></ul></div>
+              </div>
+            </details>
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">AI &amp; Business Automation</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>AI Solutions</h3><ul class="service-list"><li>AI Business Consulting</li><li>AI Chatbots</li><li>AI Customer Support</li><li>AI Voice Assistants</li><li>AI Agents</li><li>AI Knowledge Bases</li><li>AI Search Systems</li><li>AI Content Generation</li><li>AI Image Generation</li><li>AI Video Generation</li><li>AI Document Processing</li><li>AI Data Analysis</li><li>AI Report Generation</li><li>AI Forecasting</li><li>AI Business Intelligence</li><li>AI Recommendation Systems</li><li>AI for Business</li><li>AI Sales Solutions</li><li>AI Marketing Solutions</li><li>AI Customer Management</li><li>AI HR Solutions</li><li>AI Accounting Assistance</li><li>AI Business Reporting</li><li>AI Workflow Automation</li><li>AI Data Processing</li><li>AI Email Automation</li><li>AI Customer Follow-up</li><li>AI Lead Management</li></ul></div>
+                <div class="service-subgroup"><h3>Automation</h3><ul class="service-list"><li>Business Process Automation</li><li>Workflow Automation</li><li>Excel Automation</li><li>Google Sheets Automation</li><li>CRM Automation</li><li>Email Automation</li><li>WhatsApp Automation</li><li>Reporting Automation</li><li>Invoice Automation</li><li>Data Entry Automation</li><li>Document Automation</li><li>Notification Automation</li><li>API Automation</li><li>No-Code Automation</li><li>Low-Code Automation</li></ul></div>
+              </div>
+            </details>
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">Design, Branding &amp; Printing</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>Graphic Design</h3><ul class="service-list"><li>Logo Design</li><li>Brand Identity</li><li>Business Card Design</li><li>Visiting Card Design</li><li>ID Card Design</li><li>Letterhead Design</li><li>Company Profile Design</li><li>Brochure Design</li><li>Flyer Design</li><li>Poster Design</li><li>Banner Design</li><li>Hoarding Design</li><li>Standee Design</li><li>Catalogue Design</li><li>Product Catalogue</li><li>Menu Card Design</li><li>Certificate Design</li><li>Invitation Card Design</li><li>Wedding Card Design</li><li>Birthday Card Design</li><li>Anniversary Card Design</li><li>Festival Design</li><li>Social Media Design</li><li>Advertisement Design</li><li>Presentation Design</li><li>Infographic Design</li><li>Packaging Design</li><li>Label Design</li></ul></div>
+                <div class="service-subgroup"><h3>Printing Products</h3><ul class="service-list"><li>Visiting Cards</li><li>Business Cards</li><li>Letterheads</li><li>Envelopes</li><li>Brochures</li><li>Flyers</li><li>Posters</li><li>Banners</li><li>Standees</li><li>Certificates</li><li>Invitations</li><li>Calendars</li><li>Diaries</li><li>Booklets</li><li>Catalogues</li><li>Stickers</li><li>Labels</li><li>Packaging</li><li>Business Bags</li><li>Corporate Stationery</li></ul></div>
+                <div class="service-subgroup"><h3>Customized Products</h3><ul class="service-list"><li>T-Shirt Printing</li><li>Polo T-Shirt Printing</li><li>Shirt Printing</li><li>Hoodie Printing</li><li>Jacket Printing</li><li>Cap Printing</li><li>Uniform Printing</li><li>Mug Printing</li><li>Bottle Printing</li><li>Sipper Printing</li><li>Keychain Printing</li><li>Pen Printing</li><li>Mobile Cover Printing</li><li>Laptop Bag Printing</li><li>Tote Bag Printing</li><li>Cushion Printing</li><li>Corporate Gifts</li><li>Promotional Products</li></ul></div>
+              </div>
+            </details>
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">Media, Video &amp; Advertising</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>Photography &amp; Video</h3><ul class="service-list"><li>Event Photography</li><li>Event Video Shooting</li><li>Corporate Photography</li><li>Corporate Video Shooting</li><li>Product Photography</li><li>Product Video Shooting</li><li>Wedding Photography</li><li>Wedding Video</li><li>Promotional Video Shooting</li><li>Social Media Video Production</li><li>Business Video Production</li><li>Real Estate Video</li><li>Restaurant/Food Photography</li><li>Product Showcase Videos</li></ul></div>
+                <div class="service-subgroup"><h3>Video Editing</h3><ul class="service-list"><li>Professional Video Editing</li><li>YouTube Editing</li><li>Reels Editing</li><li>Short Video Editing</li><li>Corporate Video Editing</li><li>Product Video Editing</li><li>Wedding Video Editing</li><li>Event Video Editing</li><li>Advertisement Video Editing</li><li>Promotional Video Editing</li></ul></div>
+                <div class="service-subgroup"><h3>Motion Graphics</h3><ul class="service-list"><li>2D Animation</li><li>3D Animation</li><li>Explainer Videos</li><li>Intro/Outro</li><li>Video Effects</li><li>Subtitles &amp; Captions</li></ul></div>
+                <div class="service-subgroup"><h3>Advertising</h3><ul class="service-list"><li>Advertisement Design</li><li>Video Advertisements</li><li>Social Media Advertisements</li><li>Google Ads</li><li>Meta Ads</li><li>YouTube Ads</li><li>Promotional Campaigns</li><li>Product Promotion</li><li>Business Promotion</li><li>Brand Awareness Campaigns</li></ul></div>
+              </div>
+            </details>
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">Accounting, Bookkeeping &amp; Business Finance</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>Accounting</h3><ul class="service-list"><li>Bookkeeping</li><li>Accounting Support</li><li>Daily Accounting</li><li>Ledger Management</li><li>Journal Management</li><li>Accounts Payable</li><li>Accounts Receivable</li><li>Billing &amp; Invoicing</li><li>Expense Management</li><li>Income Tracking</li><li>Bank Reconciliation</li><li>Cash Management</li></ul></div>
+                <div class="service-subgroup"><h3>Financial Reports</h3><ul class="service-list"><li>Profit &amp; Loss Statement</li><li>Balance Sheet</li><li>Cash Flow Statement</li><li>Financial Reports</li><li>MIS Reports</li><li>Management Reports</li><li>Expense Reports</li><li>Sales Reports</li><li>Revenue Reports</li><li>Financial Analysis</li><li>Budget Reports</li></ul></div>
+                <div class="service-subgroup"><h3>Business Finance</h3><ul class="service-list"><li>Budgeting</li><li>Cost Analysis</li><li>Cash Flow Analysis</li><li>Revenue Analysis</li><li>Expense Analysis</li><li>Financial Planning Support</li><li>Business Performance Analysis</li><li>Financial Dashboard</li><li>Financial Data Management</li></ul></div>
+                <div class="service-subgroup"><h3>Tax &amp; Compliance Support</h3><ul class="service-list"><li>GST Data Preparation/Support</li><li>Tax Data Organization</li><li>Compliance Documentation Support</li><li>Financial Record Management</li></ul></div>
+              </div>
+            </details>
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">HR, Payroll &amp; Back-Office Operations</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>HR Services</h3><ul class="service-list"><li>Employee Database Management</li><li>Employee Records Management</li><li>Employee Documentation</li><li>Attendance Management</li><li>Leave Management</li><li>Recruitment Support</li><li>Job Posting</li><li>Candidate Screening</li><li>Interview Coordination</li><li>Employee Onboarding Support</li><li>Employee Performance Tracking</li><li>HR Reports</li><li>HR Data Management</li></ul></div>
+                <div class="service-subgroup"><h3>Payroll</h3><ul class="service-list"><li>Payroll Processing</li><li>Salary Calculation</li><li>Payslip Generation</li><li>Salary Data Management</li><li>Payroll Reports</li><li>Employee Salary Records</li><li>Attendance-Based Payroll</li><li>Payroll Data Processing</li></ul></div>
+                <div class="service-subgroup"><h3>Data Services</h3><ul class="service-list"><li>Data Entry</li><li>Online Data Entry</li><li>Offline Data Entry</li><li>Excel Data Entry</li><li>Data Cleaning</li><li>Data Conversion</li><li>Data Verification</li><li>Data Processing</li><li>Data Organization</li><li>Database Updating</li><li>Data Management</li><li>Data Digitization</li><li>PDF to Excel</li><li>PDF to Word</li><li>Excel to PDF</li><li>Document Conversion</li></ul></div>
+                <div class="service-subgroup"><h3>Back-Office Support</h3><ul class="service-list"><li>Virtual Assistant Services</li><li>Administrative Support</li><li>Remote Back-Office Support</li><li>Email Management</li><li>Document Management</li><li>Digital Filing</li><li>Record Management</li><li>Report Preparation</li><li>MIS Preparation</li><li>Customer Data Management</li><li>Order Processing</li><li>Office Support</li></ul></div>
+              </div>
+            </details>
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">CCTV, Security &amp; Remote Monitoring</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>CCTV Services</h3><ul class="service-list"><li>CCTV Installation Support</li><li>CCTV Configuration</li><li>CCTV System Management</li><li>CCTV Health Monitoring</li><li>CCTV Remote Access</li><li>CCTV Maintenance</li><li>Recording &amp; Playback Support</li></ul></div>
+                <div class="service-subgroup"><h3>Camera Monitoring</h3><ul class="service-list"><li>Multi-Camera Monitoring</li><li>Multi-Branch Monitoring</li><li>Remote Monitoring</li><li>Live CCTV Observation</li><li>Remote CCTV Monitoring</li><li>Office Monitoring</li><li>Shop Monitoring</li><li>Factory Monitoring</li><li>Warehouse Monitoring</li><li>Home Monitoring</li><li>Multi-Location Monitoring</li><li>Remote Video Observation</li></ul></div>
+                <div class="service-subgroup"><h3>Security Monitoring</h3><ul class="service-list"><li>Incident Monitoring</li><li>CCTV Alert Monitoring</li></ul></div>
+                <div class="service-subgroup"><h3>Smart/AI Security</h3><ul class="service-list"><li>AI CCTV Monitoring</li><li>Motion Detection</li><li>Intrusion Detection</li><li>People Counting</li><li>Vehicle Detection</li><li>Restricted-Area Alerts</li><li>Smart Security Alerts</li><li>AI Video Analytics</li><li>Remote Security Dashboard</li></ul></div>
+              </div>
+            </details>
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">Digital Marketing &amp; Business Growth</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>Marketing</h3><ul class="service-list"><li>Digital Marketing</li><li>Social Media Marketing</li><li>Facebook Marketing</li><li>Instagram Marketing</li><li>YouTube Marketing</li><li>Google Marketing</li><li>SEO</li><li>Local SEO</li><li>Google Business Profile</li><li>Content Marketing</li><li>Content Creation</li><li>Email Marketing</li><li>WhatsApp Marketing</li><li>Lead Generation</li><li>Online Advertising</li><li>Brand Promotion</li><li>Online Reputation Management</li></ul></div>
+                <div class="service-subgroup"><h3>Growth</h3><ul class="service-list"><li>Website Traffic Growth</li><li>Lead Generation</li><li>Customer Acquisition</li><li>Customer Retention</li><li>Sales Funnel Development</li><li>Marketing Automation</li><li>Campaign Management</li><li>Social Media Management</li><li>Business Online Presence</li><li>E-commerce Growth</li><li>Online Business Development</li></ul></div>
+              </div>
+            </details>
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">Data, Reporting &amp; Business Intelligence</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>Data Management</h3><ul class="service-list"><li>Database Management</li><li>Data Cleaning</li><li>Data Analysis</li><li>Business Analytics</li><li>Sales Analytics</li><li>Financial Analytics</li><li>Customer Analytics</li><li>Inventory Analytics</li><li>Employee Analytics</li><li>KPI Dashboards</li><li>Management Dashboards</li><li>Excel Dashboards</li><li>Power BI Dashboards</li><li>MIS Reports</li><li>Automated Reports</li><li>Business Intelligence</li><li>Data Visualization</li><li>Performance Reports</li><li>Predictive Analytics</li><li>Business Forecasting</li></ul></div>
+              </div>
+            </details>
+            <details class="service-department">
+              <summary><span class="service-summary-copy"><span class="service-department-title">IT Support &amp; Managed Services</span><span class="service-department-count"></span></span><span class="service-toggle" aria-hidden="true"></span></summary>
+              <div class="service-department-content">
+                <div class="service-subgroup"><h3>Technical Support</h3><ul class="service-list"><li>Remote IT Support</li><li>Computer Support</li><li>Software Support</li><li>Hardware Support</li><li>Network Support</li><li>Printer Support</li><li>Email Support</li><li>Cloud Support</li><li>Website Support</li><li>Application Support</li><li>Database Support</li></ul></div>
+                <div class="service-subgroup"><h3>Maintenance</h3><ul class="service-list"><li>Website Maintenance</li><li>Software Maintenance</li><li>Computer Maintenance</li><li>Network Maintenance</li><li>Server Maintenance</li><li>CCTV Maintenance</li><li>Cloud Monitoring</li><li>Backup Monitoring</li><li>Security Monitoring</li><li>System Monitoring</li></ul></div>
+                <div class="service-subgroup"><h3>Managed Services</h3><ul class="service-list"><li>Remote IT Management</li><li>IT Helpdesk</li><li>Business IT Support</li><li>Monthly IT Support</li><li>Annual Maintenance Contract</li><li>Multi-Location IT Management</li></ul></div>
+              </div>
+            </details>
+          </div>
+          <p class="service-search-empty" id="service-search-empty" hidden>No matching services found.</p>
+        </div>
+      </section>
+
+      <section class="section clients-section" id="clients" hidden aria-hidden="true">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Selected clients / worldwide</p>
+              <h2>A few of many.</h2>
+            </div>
+            <p class="section-intro">
+              These 37 selected client examples represent a wider roster across different countries and industries.
+            </p>
+          </div>
+          <div class="client-filters" role="tablist" aria-label="Clients by region">
+            <button class="client-filter" id="tab-canada" type="button" role="tab" aria-selected="true" aria-controls="panel-canada" tabindex="0">Canada <span>07</span></button>
+            <button class="client-filter" id="tab-uk" type="button" role="tab" aria-selected="false" aria-controls="panel-uk" tabindex="-1">United Kingdom <span>04</span></button>
+            <button class="client-filter" id="tab-australia" type="button" role="tab" aria-selected="false" aria-controls="panel-australia" tabindex="-1">Australia <span>05</span></button>
+            <button class="client-filter" id="tab-india" type="button" role="tab" aria-selected="false" aria-controls="panel-india" tabindex="-1">Indian clients <span>13</span></button>
+            <button class="client-filter" id="tab-usa" type="button" role="tab" aria-selected="false" aria-controls="panel-usa" tabindex="-1">USA <span>08</span></button>
+          </div>
+          <section class="client-panel" id="panel-canada" role="tabpanel" aria-labelledby="tab-canada" tabindex="0" data-visible-count="7">
+            <div class="client-list">
+              <article class="client-entry"><div><span class="client-index">Canada / 01</span><h3>MapleMunch Café</h3></div><ul class="client-services"><li>Website</li><li>Social media marketing</li><li>Menu design</li><li>Food video editing</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Canada / 02</span><h3>NorthStar Properties</h3></div><ul class="client-services"><li>Real estate website</li><li>SEO</li><li>Lead generation</li><li>Google Business Profile</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Canada / 03</span><h3>TrueNorth Books</h3></div><ul class="client-services"><li>Bookkeeping</li><li>Payroll processing</li><li>Financial reports</li><li>Expense management</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Canada / 04</span><h3>CodeHarbor Digital</h3></div><ul class="client-services"><li>Custom software</li><li>CRM software</li><li>Cloud solutions</li><li>Remote IT support</li><li>Database management</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Canada / 05</span><h3>Velvet Maple Boutique</h3></div><ul class="client-services"><li>E-commerce website</li><li>Product catalogue</li><li>Social media design</li><li>Product video editing</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Canada / 06</span><h3>DataPeak Analytics</h3></div><ul class="client-services"><li>Data analysis</li><li>Power BI dashboards</li><li>Business intelligence</li><li>Predictive analytics</li><li>Automated reports</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Canada / 07</span><h3>SafeVision Canada</h3></div><ul class="client-services"><li>Remote CCTV monitoring</li><li>AI CCTV monitoring</li><li>Security alerts</li><li>Multi-location monitoring</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Canada / 08</span><h3>WorkNest HR</h3></div><ul class="client-services"><li>Employee database management</li><li>Recruitment support</li><li>Payroll</li><li>HR reports</li><li>Employee documentation</li></ul></article>
+            </div>
+          </section>
+          <section class="client-panel" id="panel-uk" role="tabpanel" aria-labelledby="tab-uk" tabindex="0" data-visible-count="4" hidden>
+            <div class="client-list">
+              <article class="client-entry"><div><span class="client-index">United Kingdom / 01</span><h3>Crust &amp; Ember</h3></div><ul class="client-services"><li>Website</li><li>Social media marketing</li><li>Advertisement design</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">United Kingdom / 02</span><h3>PrimeNest Properties</h3></div><ul class="client-services"><li>Real estate website</li><li>SEO</li><li>Lead generation</li><li>Social media marketing</li><li>CRM automation</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">United Kingdom / 03</span><h3>LedgerBee UK</h3></div><ul class="client-services"><li>Bookkeeping</li><li>Billing and invoicing</li><li>Financial reports</li><li>MIS reports</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">United Kingdom / 04</span><h3>PixelRush Studio</h3></div><ul class="client-services"><li>Graphic design</li><li>Video editing</li><li>Motion graphics</li><li>Social media design</li><li>Explainer videos</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">United Kingdom / 05</span><h3>TaskForge UK</h3></div><ul class="client-services"><li>Business process automation</li><li>CRM automation</li><li>Email automation</li><li>Reporting automation</li><li>AI workflow automation</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">United Kingdom / 06</span><h3>BritStyle Collective</h3></div><ul class="client-services"><li>E-commerce website</li><li>Product catalogue</li><li>Branding</li><li>Social media marketing</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">United Kingdom / 07</span><h3>WatchTower 360</h3></div><ul class="client-services"><li>Remote CCTV monitoring</li><li>AI video analytics</li><li>Security dashboard</li><li>Incident monitoring</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">United Kingdom / 08</span><h3>GreenGrid Consulting</h3></div><ul class="client-services"><li>Business consulting</li><li>Market research</li><li>Business strategy</li><li>Digital transformation consulting</li></ul></article>
+            </div>
+          </section>
+          <section class="client-panel" id="panel-australia" role="tabpanel" aria-labelledby="tab-australia" tabindex="0" data-visible-count="5" hidden>
+            <div class="client-list">
+              <article class="client-entry"><div><span class="client-index">Australia / 01</span><h3>Coastal Crust Pizza</h3></div><ul class="client-services"><li>Website</li><li>Social media marketing</li><li>Advertisement design</li><li>Reels editing</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Australia / 02</span><h3>AussieNest Realty</h3></div><ul class="client-services"><li>Real estate website</li><li>SEO</li><li>Lead generation</li><li>Google Business Profile</li><li>CRM automation</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Australia / 03</span><h3>SwiftBooks AU</h3></div><ul class="client-services"><li>Bookkeeping</li><li>Payroll processing</li><li>Financial reports</li><li>Cash-flow analysis</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Australia / 04</span><h3>SparkByte Digital</h3></div><ul class="client-services"><li>Custom software</li><li>Mobile app development</li><li>Cloud solutions</li><li>Remote IT support</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Australia / 05</span><h3>Brew &amp; Bloom Café</h3></div><ul class="client-services"><li>Website</li><li>Menu design</li><li>Social media design</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Australia / 06</span><h3>VisionShield AU</h3></div><ul class="client-services"><li>Remote CCTV monitoring</li><li>AI video analytics</li><li>Multi-location monitoring</li><li>Security alerts</li><li>Remote security dashboard</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Australia / 07</span><h3>AutoPilot Hub</h3></div><ul class="client-services"><li>AI chatbots</li><li>AI customer support</li><li>AI agents</li><li>Workflow automation</li><li>WhatsApp automation</li><li>AI reporting</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">Australia / 08</span><h3>DataWave Analytics</h3></div><ul class="client-services"><li>Data cleaning</li><li>Data analysis</li><li>KPI dashboards</li><li>Power BI dashboards</li><li>Business forecasting</li></ul></article>
+            </div>
+          </section>
+          <section class="client-panel" id="panel-india" role="tabpanel" aria-labelledby="tab-india" tabindex="0" data-visible-count="13" hidden>
+            <div class="client-list">
+              <article class="client-entry"><div><span class="client-index">India / 01</span><h3>Cheezy Blast Pizza</h3></div><ul class="client-services"><li>Social media management</li><li>Advertisement design</li><li>Reels editing</li><li>Business video production</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 02</span><h3>GlowNest Beauty Studio</h3></div><ul class="client-services"><li>Graphic design</li><li>Social media design</li><li>Video editing</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 03</span><h3>Shree Krishna Saree House</h3></div><ul class="client-services"><li>E-commerce website</li><li>Product catalogue</li><li>Social media marketing</li><li>WhatsApp marketing</li><li>Customer data management</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 04</span><h3>Urban Chai Café</h3></div><ul class="client-services"><li>Website</li><li>Social media marketing</li><li>Food and product photography</li><li>Reels editing</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 05</span><h3>PixelCraft Studio</h3></div><ul class="client-services"><li>Graphic design</li><li>Video editing</li><li>Motion graphics</li><li>Social media design</li><li>Advertisement design</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 06</span><h3>RoyalRide Travels</h3></div><ul class="client-services"><li>Website</li><li>CRM automation</li><li>WhatsApp automation</li><li>Customer management</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 07</span><h3>Aarohi Education Hub</h3></div><ul class="client-services"><li>School and college website</li><li>Data management</li><li>Back-office support</li><li>Document management</li><li>MIS preparation</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 08</span><h3>FinEdge Advisors</h3></div><ul class="client-services"><li>Bookkeeping</li><li>Financial reports</li><li>MIS reports</li><li>Data management</li><li>Business performance analysis</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 09</span><h3>QuickKart Online</h3></div><ul class="client-services"><li>E-commerce website</li><li>SEO</li><li>Lead generation</li><li>Customer acquisition</li><li>Marketing automation</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 10</span><h3>SafeWatch 360</h3></div><ul class="client-services"><li>Remote CCTV monitoring</li><li>AI CCTV monitoring</li><li>Multi-location monitoring</li><li>Security dashboard</li><li>Incident monitoring</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 11</span><h3>BuildMint Consultants</h3></div><ul class="client-services"><li>Business consulting</li><li>Market analysis</li><li>Business planning</li><li>Business growth planning</li><li>Performance analysis</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 12</span><h3>StyleAura Boutique</h3></div><ul class="client-services"><li>Product catalogue</li><li>Social media design</li><li>Product video editing</li><li>E-commerce website</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">India / 13</span><h3>DataNest Solutions</h3></div><ul class="client-services"><li>Data entry</li><li>Data cleaning</li><li>Excel dashboards</li><li>Power BI dashboards</li><li>Automated reports</li><li>Data analysis</li></ul></article>
+            </div>
+          </section>
+          <section class="client-panel" id="panel-usa" role="tabpanel" aria-labelledby="tab-usa" tabindex="0" data-visible-count="8" hidden>
+            <div class="client-list">
+              <article class="client-entry"><div><span class="client-index">USA / 01</span><h3>BluePeak Realty</h3></div><ul class="client-services"><li>Website</li><li>SEO</li><li>Lead generation</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">USA / 02</span><h3>BurgerBolt Kitchen</h3></div><ul class="client-services"><li>Creative marketing material</li><li>Social media support</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">USA / 03</span><h3>CloudBridge Consulting</h3></div><ul class="client-services"><li>Remote IT support</li><li>Cloud support</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">USA / 04</span><h3>LedgerLoop</h3></div><ul class="client-services"><li>Bookkeeping</li><li>Financial reporting</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">USA / 05</span><h3>BrightFrame Media</h3></div><ul class="client-services"><li>Video editing</li><li>Motion graphics</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">USA / 06</span><h3>NovaNest E-Commerce</h3></div><ul class="client-services"><li>E-commerce</li><li>Customer management</li><li>Automation</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">USA / 07</span><h3>WatchGrid Security</h3></div><ul class="client-services"><li>Remote CCTV observation</li><li>Incident monitoring</li></ul></article>
+              <article class="client-entry"><div><span class="client-index">USA / 08</span><h3>TaskPilot AI</h3></div><ul class="client-services"><li>AI automation</li><li>Customer workflows</li><li>Reporting tasks</li></ul></article>
+            </div>
+          </section>
+          <div class="client-more">
+            <strong>And many more.</strong>
+            <p>This is a small selection from our wider client roster across multiple countries and industries.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-band" id="about">
+        <div class="about wrap">
+          <div>
+            <p class="eyebrow">About S&amp;K</p>
+            <h2>Built around your business, not a template.</h2>
+          </div>
+          <div class="about-copy">
+            <p>
+              S&amp;K Digital Galaxy provides business consulting and digital services across finance, software, web, automation, marketing, creative production, data, and managed IT. The work shown here reflects the range of services available to businesses at different stages.
+            </p>
+            <p>
+              Selected client examples on this site represent India, the United States, Canada, the United Kingdom, and Australia, across industries including food, retail, education, finance, travel, security, consulting, and analytics. Services are available worldwide.
+            </p>
+            <div class="reach">
+              <span class="reach-mark" aria-hidden="true">↗</span>
+              <span><strong>Worldwide reach</strong><span>Remote collaboration across regions</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact wrap" id="contact">
+        <div class="contact-top">
+          <div>
+            <p class="eyebrow">Let's talk</p>
+            <h2>Tell us what<br />you’re working on.</h2>
+          </div>
+          <p>Share a little about your business or project, and reach the right person directly.</p>
+        </div>
+        <div class="contact-layout">
+          <form class="inquiry-form" action="/api/inquiries" method="POST">
+            <div class="form-trap" aria-hidden="true">
+              <label for="inquiry-website">Leave this field blank</label>
+              <input id="inquiry-website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="form-field">
+              <label for="inquiry-name">Your name</label>
+              <input id="inquiry-name" name="name" maxlength="100" autocomplete="name" placeholder="Name" required />
+            </div>
+            <div class="form-field">
+              <label for="inquiry-email">Email address</label>
+              <input id="inquiry-email" type="email" name="email" maxlength="254" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-field">
+              <label for="inquiry-phone">Phone / WhatsApp (optional)</label>
+              <input id="inquiry-phone" type="tel" name="phone" maxlength="40" autocomplete="tel" placeholder="Phone number" />
+            </div>
+            <div class="form-field">
+              <label for="inquiry-business">Business</label>
+              <input id="inquiry-business" name="business" maxlength="140" autocomplete="organization" placeholder="Business name" />
+            </div>
+            <div class="form-field">
+              <label for="inquiry-service">Service of interest</label>
+              <select id="inquiry-service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Business consulting</option>
+                <option>Finance and accounting</option>
+                <option>Software and IT</option>
+                <option>Marketing and media</option>
+                <option>Design and content</option>
+                <option>Data and analytics</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field form-field-wide">
+              <label for="inquiry-message">Project details</label>
+              <textarea id="inquiry-message" name="message" maxlength="4000" placeholder="Tell us a little about your project" required></textarea>
+            </div>
+            <button class="button form-submit form-field-wide" type="submit">Send enquiry <span aria-hidden="true">↗</span></button>
+            <p class="form-note form-field-wide form-privacy-note">We use the details you provide to respond and keep a private record of your enquiry.</p>
+            <p class="form-note form-field-wide form-status" aria-live="polite" role="status"></p>
+          </form>
+          <div class="contact-details">
+            <div class="contact-grid">
+              <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <a href="mailto:sandkdigitalgalaxy@gmail.com">sandkdigitalgalaxy@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Soham Patel</span>
+                <p>Phone / WhatsApp</p>
+                <div class="contact-actions">
+                  <a href="tel:+919313857476">+91 93138 57476</a>
+                  <a href="https://wa.me/919313857476">WhatsApp <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Kiran Thakor</span>
+                <p>Phone / WhatsApp</p>
+                <div class="contact-actions">
+                  <a href="tel:+919714331564">+91 97143 31564</a>
+                  <a href="https://wa.me/919714331564">WhatsApp <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <p>© <span id="year">2026</span> S&amp;K Digital Galaxy</p>
+      <p>Business consulting &amp; digital services worldwide</p>
+    </footer>
+
+    <script src="site.js" defer></script>
+  </body>
+</html>
